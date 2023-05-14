@@ -12,7 +12,7 @@ sudo dkms build -m "${KERNEL_MODULE_NAME}" -v "${DKMS_MODULE_VERSION}" --force
 sudo dkms install -m "${KERNEL_MODULE_NAME}" -v "${DKMS_MODULE_VERSION}" --force
 
 if sudo dmesg | grep -q 'initramfs'; then
-  sudo update-initramfs -u -k $(uname -r)
+	mkinitcpio -P
 fi
 
 printf '\n%s\n    %s\n' "Please reboot your system and check whether ${KERNEL_MODULE_NAME} has been loaded via the command" 'dkms status'
