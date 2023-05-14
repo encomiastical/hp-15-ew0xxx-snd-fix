@@ -1,5 +1,6 @@
 # hp-15-ew0xxx-snd-fix
 DKMS module for fixing the sound on Linux for HP models Envy x360 15-ew0xxx
+I forked this project to make it work under Archlinux
 
 ## Purpose
 The HP Envy x360 15-ew0xxx laptop models dating from 2022 seem to be quite compatible with Linux, except the sound from built-in speakers. This repo contains two DKMS modules for fixing this issue on Ubuntu Linux 23.04 (kernel 6.2) and the exact model 15-ew0776ng.
