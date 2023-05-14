@@ -46,12 +46,12 @@ sudo tee "/usr/src/${KERNEL_MODULE_NAME}-${DKMS_MODULE_VERSION}/dkms-patchmodule
 # kernelver is not set on kernel upgrade from apt, but DPKG_MAINTSCRIPT_PACKAGE
 # contains the kernel image or header package upgraded
 
-kernelver=($uname -r | cut -d '-' -f 1)
+kernelver=$(uname -r | cut -d '-' -f 1)
 vers=(${kernelver//./ })   # split kernel version into individual elements
 major="${vers[0]}"
 minor="${vers[1]}"
 version="$major.$minor"    # recombine as needed
-subver=($uname -r | cut -d '.' -f 3 | cut -d '-' -f 1)
+subver=$(uname -r | cut -d '.' -f 3 | cut -d '-' -f 1)
 
 echo "Downloading kernel source $version.$subver for $kernelver"
 wget https://mirrors.edge.kernel.org/pub/linux/kernel/v$major.x/linux-$version.$subver.tar.xz
