@@ -1,4 +1,5 @@
 **Updated patch to work with https://github.com/torvalds/linux/commit/ef4ba63f12b03532378395a8611f2f6e22ece67b**
+
 **Please note this is a hack and I don't know what I'm doing**
 
 # hp-15-ew0xxx-snd-fix
